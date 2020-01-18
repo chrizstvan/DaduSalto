@@ -20,4 +20,20 @@
 }
 
 
+- (IBAction)saltoButton:(id)sender {
+    
+    [self randomNumber];
+}
+
+-(void) randomNumber {
+    
+    int min = 1;
+    int max = 7;
+    
+    int randomNumb = arc4random_uniform(max - min) + min;
+    self.titleLabel.text = [NSString stringWithFormat:@"Rolled a %i", randomNumb];
+    
+    //implement to image
+    self.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"Dice%i.png", randomNumb]];
+}
 @end

@@ -1,24 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="American Captain.otf">
+            <string>AmericanCaptain</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="MHV-Uv-V4G">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dadu salto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZb-nP-0W2">
+                                <rect key="frame" x="16" y="33" width="343" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eZb-nP-0W2" secondAttribute="height" multiplier="343:142" id="hex-zH-7hj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanCaptain" family="American Captain" pointSize="60"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0M-E3-P5W">
+                                <rect key="frame" x="16" y="505" width="343" height="142"/>
+                                <fontDescription key="fontDescription" name="AmericanCaptain" family="American Captain" pointSize="80"/>
+                                <state key="normal" title="salto">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saltoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9kZ-pJ-x0j"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice1" translatesAutoresizingMaskIntoConstraints="NO" id="Nol-QW-TuV">
+                                <rect key="frame" x="32" y="203" width="311" height="282"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="A0M-E3-P5W" secondAttribute="bottom" constant="20" id="63e-8a-zaC"/>
+                            <constraint firstItem="MHV-Uv-V4G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7qb-qn-3ij"/>
+                            <constraint firstItem="eZb-nP-0W2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="AKg-KG-HFo"/>
+                            <constraint firstItem="MHV-Uv-V4G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ByN-LT-N2b"/>
+                            <constraint firstItem="A0M-E3-P5W" firstAttribute="top" secondItem="Nol-QW-TuV" secondAttribute="bottom" constant="20" id="DtW-Fn-osf"/>
+                            <constraint firstItem="eZb-nP-0W2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="Dve-m7-x5A"/>
+                            <constraint firstItem="Nol-QW-TuV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="KUS-9t-moq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nol-QW-TuV" secondAttribute="trailing" constant="32" id="PzF-op-bum"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A0M-E3-P5W" secondAttribute="trailing" constant="16" id="WIN-LP-c6G"/>
+                            <constraint firstItem="Nol-QW-TuV" firstAttribute="top" secondItem="eZb-nP-0W2" secondAttribute="bottom" constant="28" id="XWf-R0-owu"/>
+                            <constraint firstAttribute="bottom" secondItem="MHV-Uv-V4G" secondAttribute="bottom" id="aXa-4N-8XD"/>
+                            <constraint firstItem="MHV-Uv-V4G" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hxm-Iu-aBC"/>
+                            <constraint firstItem="A0M-E3-P5W" firstAttribute="height" secondItem="eZb-nP-0W2" secondAttribute="height" id="jDf-0Z-GVQ"/>
+                            <constraint firstItem="A0M-E3-P5W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qEV-Gc-TsF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eZb-nP-0W2" secondAttribute="trailing" constant="16" id="yzr-vq-oJA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Nol-QW-TuV" id="EUi-e6-1ur"/>
+                        <outlet property="titleLabel" destination="eZb-nP-0W2" id="B7U-fC-Fct"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="1980" height="1200"/>
+        <image name="Dice1" width="512" height="512"/>
+    </resources>
 </document>
